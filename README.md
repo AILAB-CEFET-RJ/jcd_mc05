@@ -3,6 +3,10 @@
 Short Course - JCD 2026  
 **Autores:** Bruno Menezes (LNCC), Eduardo Bezerra (CEFET/RJ)
 
+## Slido
+
+https://app.sli.do/event/wrY3XgnsLvwArzwyaaXRmL
+
 ## Sobre
 
 Este repositório reúne materiais e um exemplo prático do minicurso **MC05 - Large Language Models and Agents**, com foco em fundamentos e aplicações de LLMs, incluindo uso de agentes.
