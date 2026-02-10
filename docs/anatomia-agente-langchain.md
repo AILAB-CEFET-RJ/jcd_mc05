@@ -1,7 +1,60 @@
 # Anatomia do Agente no LangChain
 
+No trecho abaixo, estamos criando um orquestrador. Ele recebe um objetivo, avalia quais ferramentas tem à disposição lendo suas descrições e inicia um ciclo de raciocínio e ação até encontrar a resposta final.
+
+```python
+agent = initialize_agent(
+    tools,
+    llm,
+    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    verbose=True
+)
+```
+
 O comando `initialize_agent` transforma um modelo de linguagem estático em um **agente dinâmico**.  
 Ele configura o "cérebro" para saber quando parar de apenas responder texto e começar a agir com ferramentas.
+
+## Abrindo a caixa do `initialize_agent`
+
+Quando a função  `initialize_agent(...)` é invocada, o LangChain monta um pipeline interno.  
+O ponto principal é que existe  um **prompt de sistema/instrução** por trás, com regras de formato para o padrão ReAct.
+
+Em termos práticos, o que a função faz:
+
+1. Monta um prompt-base do agente com instruções de comportamento.
+2. Injeta no prompt a lista de tools (`name` + `description`).
+3. Define o formato esperado de resposta do modelo (por exemplo: `Thought`, `Action`, `Action Input`, `Observation`, `Final Answer`).
+4. Cria um parser para ler a saída do modelo e decidir:
+   - se ele pediu uma tool (`Action`)
+   - ou se terminou (`Final Answer`).
+5. Executa um loop:
+   - LLM raciocina
+   - chama tool
+   - recebe observação
+   - adiciona ao histórico interno (scratchpad)
+   - repete até resposta final.
+
+### Prompt interno (visão didática)
+
+O texto exato pode variar por versão, mas o esqueleto é equivalente a isto:
+
+```text
+You are an agent that can use the following tools:
+- ToolA: <description>
+- ToolB: <description>
+
+Use this format:
+Question: ...
+Thought: ...
+Action: one of [ToolA, ToolB]
+Action Input: ...
+Observation: ...
+... (repeat Thought/Action/Action Input/Observation as needed)
+Thought: I now know the final answer
+Final Answer: ...
+```
+
+Por isso `description` é tão importante: ela vira parte do prompt e orienta a decisão do agente sobre **quando** e **qual** ferramenta usar.
 
 ## 1. `tools` (As Ferramentas)
 
