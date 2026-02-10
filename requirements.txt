@@ -1,0 +1,4 @@
+langchain
+langchain-classic
+langchain-openai
+python-dotenv
