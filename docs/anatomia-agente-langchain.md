@@ -79,7 +79,7 @@ Este é o ponto central para explicar o padrão **ReAct**.
 - **ReAct:** acrônimo de **Reason + Act** (Raciocinar + Agir).
 - **Description:** o agente escolhe a ferramenta com base no campo `description` definido em cada tool.
 
-**Dica para os alunos:** se a descrição da ferramenta for ruim, o agente tende a escolher mal (ou não escolher) a ferramenta certa.
+**Importante:** se a descrição da ferramenta for ruim, o agente tende a escolher mal (ou não escolher) a ferramenta certa.
 
 ## 4. `verbose=True` (A Caixa Preta Aberta)
 
@@ -96,7 +96,7 @@ Com isso, os alunos visualizam claramente como o agente decide, executa e integr
 
 ## Relacionando com `react_demo.py`
 
-No arquivo `react_demo.py`, você pode mapear os conceitos da seguinte forma:
+No arquivo `react_demo.py`, é possível mapear os conceitos aqui descritos da seguinte forma:
 
 - `tools=[...]`: define o conjunto de ações disponíveis para o agente.
 - `llm = ChatOpenAI(...)`: define o modelo que orquestra as decisões.
