@@ -1,7 +1,10 @@
 langchain
 langchain-classic
+langchain-community
+langchain-ollama
 langchain-openai
 langchain-text-splitters
 langgraph
 pydantic
 python-dotenv
+sentence-transformers
