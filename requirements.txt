@@ -1,5 +1,7 @@
 langchain
 langchain-classic
 langchain-openai
+langchain-text-splitters
 langgraph
+pydantic
 python-dotenv
