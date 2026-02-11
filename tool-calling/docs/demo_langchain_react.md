@@ -56,6 +56,28 @@ Final Answer: ...
 
 Por isso `description` é tão importante: ela vira parte do prompt e orienta a decisão do agente sobre **quando** e **qual** ferramenta usar.
 
+### Estrutura do scratchpad (`intermediate_steps`)
+
+No agente clássico, o "histórico interno" costuma ser representado por `intermediate_steps`.
+
+Conceitualmente, ele é uma lista de pares:
+
+```text
+[
+  (AgentAction, observation),
+  (AgentAction, observation),
+  ...
+]
+```
+
+Cada `AgentAction` carrega, em geral:
+
+- `tool`: nome da ferramenta escolhida.
+- `tool_input`: entrada passada para a ferramenta.
+- `log`: trecho textual com o passo de raciocínio/ação.
+
+Esse conteúdo é convertido para o formato textual ReAct e reinjetado no prompt a cada iteração (`Thought/Action/Action Input/Observation`), até o `Final Answer`.
+
 ## 1. `tools` (As Ferramentas)
 
 **O que é:** Uma lista de funções que o agente pode executar.
@@ -94,9 +116,9 @@ Este é o ponto central para explicar o padrão **ReAct**.
 
 Com isso, os alunos visualizam claramente como o agente decide, executa e integra resultados.
 
-## Relacionando com `react_demo.py`
+## Relacionando com `tool-calling/demo_langchain_react.py`
 
-No arquivo `react_demo.py`, é possível mapear os conceitos aqui descritos da seguinte forma:
+No arquivo `tool-calling/demo_langchain_react.py`, é possível mapear os conceitos aqui descritos da seguinte forma:
 
 - `tools=[...]`: define o conjunto de ações disponíveis para o agente.
 - `llm = ChatOpenAI(...)`: define o modelo que orquestra as decisões.

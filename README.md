@@ -42,13 +42,22 @@ Apresentar, de forma concisa e aplicada, os fundamentos conceituais e práticos 
 
 ## Estrutura atual do repositório
 
-- `react_demo.py`: exemplo simples de agente ReAct com LangChain.
+- `tool-calling/demo_langchain_react.py`: exemplo de agente ReAct com LangChain (AgentExecutor clássico).
+- `tool-calling/demo_langgraph_react.py`: variante do exemplo usando LangGraph/LangChain `create_agent`.
+- `tool-calling/demo_langgraph_react_pydantic.py`: variante com validação de entrada das tools usando Pydantic.
+- `rag/chunking.py`: exemplo introdutório de chunking para a parte de RAG.
 - `requirements.txt`: dependências Python do projeto.
-- `docs/anatomia-agente-langchain.md`: explicação didática da anatomia de um agente no LangChain.
+- `tool-calling/docs/demo_langchain_react.md`: explicação didática da anatomia de um agente no LangChain.
+
+## Organização do minicurso
+
+- `tool-calling/`: materiais e demos da parte de Tool Calling.
+- `rag/`: materiais e demos da parte de RAG.
 
 ## Material da aula
 
-- Anatomia do agente (LangChain): `docs/anatomia-agente-langchain.md`
+- Anatomia do agente (LangChain): `tool-calling/docs/demo_langchain_react.md`
+- Anatomia do agente (LangGraph/LangChain `create_agent`): `tool-calling/docs/demo_langgraph_react.md`
 
 ## Instalação (pip)
 
@@ -74,7 +83,10 @@ OPENAI_API_KEY=cole_sua_chave_aqui
 ## Execução do exemplo
 
 ```bash
-python react_demo.py
+python tool-calling/demo_langchain_react.py
+python tool-calling/demo_langgraph_react.py
+python tool-calling/demo_langgraph_react_pydantic.py
+python rag/chunking.py
 ```
 
 ## Bibliografia
