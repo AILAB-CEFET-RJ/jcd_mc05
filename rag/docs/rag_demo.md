@@ -126,13 +126,6 @@ Instale widgets do Jupyter:
 conda install -c conda-forge ipywidgets jupyterlab notebook
 ```
 
-## Como executar
-1. Ative o ambiente (`ailab311` ou equivalente)
-2. Instale dependências do `requirements.txt`
-3. Abra `rag/notebooks/rag_demo.ipynb`
-4. Execute células em ordem
-5. Valide respostas de `rag_pipeline(...)`
-
 ## Extensões sugeridas
 - Trocar `TextLoader` por `PyPDFLoader`
 - Testar chunk sizes diferentes
