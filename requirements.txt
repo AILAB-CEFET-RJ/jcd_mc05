@@ -8,3 +8,4 @@ langgraph
 pydantic
 python-dotenv
 sentence-transformers
+chromadb

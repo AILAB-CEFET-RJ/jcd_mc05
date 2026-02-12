@@ -9,7 +9,7 @@ https://app.sli.do/event/wrY3XgnsLvwArzwyaaXRmL
 
 ## Sobre
 
-Este repositório reúne materiais e um exemplo prático do minicurso **MC05 - Large Language Models and Agents**, com foco em fundamentos e aplicações de LLMs, incluindo uso de agentes.
+Este repositório reúne materiais e um exemplo prático do minicurso **MC05 - Large Language Models and Agents**, com foco em fundamentos e aplicações de LLMs, incluindo implementação de agentes.
 
 ## Carga Horária e Horários
 
@@ -91,12 +91,4 @@ python rag/chunking.py
 
 ## Bibliografia
 
-- Bai, Y. et al. *Qwen2: Scaling Open Models for Multilingual and Multimodal Understanding*. Alibaba DAMO Academy, arXiv:2407.10671 (2024). https://arxiv.org/abs/2407.10671
-- Qian, J. et al. *Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution*. arXiv:2409.12191 (2025). https://arxiv.org/abs/2409.12191
-- Jiang, A.Q. et al. *Mixtral 8x7B: A Mixture-of-Experts Language Model*. Mistral AI Technical Report, arXiv:2401.04088 (2024). https://arxiv.org/abs/2401.04088
-- Zhang, Y. et al. *DeepSeek Coder V2: Scaling Open Code Models with Mixture-of-Experts*. arXiv:2410.03810 (2024). https://arxiv.org/abs/2410.03810
-- Touvron, H. et al. *LLaMA 3: Open Foundation and Chat Models*. Meta AI Technical Report, arXiv:2407.21783 (2024). https://arxiv.org/abs/2407.21783
-- Xu, Y. et al. *Revisiting Group Relative Policy Optimization*. arXiv:2505.22257v1 (2025). https://arxiv.org/abs/2505.22257
-- Li, K. et al. *Efficient Fine-Tuning of Quantized LLMs via Three-Stage Optimization*. ICLR 2025 submission. https://openreview.net/forum?id=zcx6rIMbbR
-- Dettmers, T. et al. *QLoRA: Efficient Finetuning of Quantized LLMs*. NeurIPS (2023). https://arxiv.org/abs/2305.14314
-- Ouyang, L. et al. *Training Language Models to Follow Instructions with Human Feedback*. OpenAI, NeurIPS (2022). https://arxiv.org/abs/2203.02155
+- Bezerra, Eduardo. **Introduction to LLM-Based Agents**. DOI: https://doi.org/10.5753/sbc.17956.8.2

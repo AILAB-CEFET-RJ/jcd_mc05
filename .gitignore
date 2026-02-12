@@ -1,1 +1,6 @@
 .env
+rag/notebooks/data/chroma_store/chroma.sqlite3
+rag/notebooks/data/chroma_store/d0680c08-fa09-4c8f-ad6b-8eb57d1e3fc7/data_level0.bin
+rag/notebooks/data/chroma_store/d0680c08-fa09-4c8f-ad6b-8eb57d1e3fc7/header.bin
+rag/notebooks/data/chroma_store/d0680c08-fa09-4c8f-ad6b-8eb57d1e3fc7/length.bin
+rag/notebooks/data/chroma_store/d0680c08-fa09-4c8f-ad6b-8eb57d1e3fc7/link_lists.bin
